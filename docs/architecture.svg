@@ -1,0 +1,99 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1046' viewBox='0 0 1920 1046' font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"><defs><linearGradient id='band' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#4f46e5'/><stop offset='0.55' stop-color='#9333ea'/><stop offset='1' stop-color='#db2777'/></linearGradient><filter id='sh' x='-10%' y='-10%' width='120%' height='130%'><feDropShadow dx='0' dy='3' stdDeviation='4' flood-color='#0f172a' flood-opacity='0.12'/></filter><marker id='a' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#334155'/></marker></defs><rect width='1920' height='1046' fill='#ffffff'/><rect x='0' y='0' width='1920' height='150' fill='url(#band)'/>
+<text x='50' y='78' font-size='48' font-weight='800' fill='#ffffff' text-anchor='start'>hybrid-moderation: a fast classifier, a local LLM for the grey zone</text>
+<text x='50' y='122' font-size='25' font-weight='500' fill='#f5f3ff' text-anchor='start'>Benchmarked on Civil Comments and HateCheck. Runs locally on free models.</text>
+<text x='1870' y='122' font-size='23' font-weight='600' fill='#fce7f3' text-anchor='end'>github.com/msaad7777/hybrid-moderation</text>
+<rect x='50' y='190' width='1820' height='242' rx='22' fill='#eef2ff'/>
+<rect x='74' y='208' width='440' height='38' rx='19' fill='#4338ca'/>
+<text x='294' y='235' font-size='22' font-weight='700' fill='#ffffff' text-anchor='middle'>Data (pinned, SHA-256 checked)</text>
+<rect x='50' y='462' width='1820' height='294' rx='22' fill='#fdf4ff'/>
+<rect x='74' y='480' width='414' height='38' rx='19' fill='#a21caf'/>
+<text x='281' y='507' font-size='22' font-weight='700' fill='#ffffff' text-anchor='middle'>One comment (POST /moderate)</text>
+<path d='M476,318 L532,318' stroke='#334155' stroke-width='3.5' fill='none' marker-end='url(#a)'/>
+<path d='M932,318 L988,318' stroke='#334155' stroke-width='3.5' fill='none' marker-end='url(#a)'/>
+<path d='M1188,398 L1188,447 L960,447 L960,528' stroke='#334155' stroke-width='3.5' fill='none' marker-end='url(#a)'/>
+<rect x='1010' y='417' width='128' height='28' rx='14' fill='#ffffff' stroke='#cbd5e1'/>
+<text x='1074' y='437' font-size='18' font-weight='700' fill='#334155' text-anchor='middle'>thresholds</text>
+<path d='M385,590 L441,590' stroke='#334155' stroke-width='3.5' fill='none' marker-end='url(#a)'/>
+<path d='M750,590 L806,590' stroke='#334155' stroke-width='3.5' fill='none' marker-end='url(#a)'/>
+<path d='M1114,590 L1170,590' stroke='#334155' stroke-width='3.5' fill='none' marker-end='url(#a)'/>
+<path d='M1479,590 L1535,590' stroke='#334155' stroke-width='3.5' fill='none' marker-end='url(#a)'/>
+<g filter='url(#sh)'><rect x='80' y='260' width='392' height='138' rx='16' fill='#f8fafc' stroke='#475569' stroke-width='3'/></g>
+<path d='M80,276 a16,16 0 0 1 16,-16 h360 a16,16 0 0 1 16,16 v38 h-392 z' fill='#475569'/>
+<text x='276' y='298' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>Civil Comments</text>
+<text x='276' y='348' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>CC0; 150k train,</text>
+<text x='276' y='379' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>1k tune, 1k test</text>
+<g filter='url(#sh)'><rect x='536' y='260' width='392' height='138' rx='16' fill='#eff6ff' stroke='#2563eb' stroke-width='3'/></g>
+<path d='M536,276 a16,16 0 0 1 16,-16 h360 a16,16 0 0 1 16,16 v38 h-392 z' fill='#2563eb'/>
+<text x='732' y='298' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>Train TF-IDF + LR</text>
+<text x='732' y='348' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>on the train</text>
+<text x='732' y='379' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>sample only</text>
+<g filter='url(#sh)'><rect x='992' y='260' width='392' height='138' rx='16' fill='#eff6ff' stroke='#2563eb' stroke-width='3'/></g>
+<path d='M992,276 a16,16 0 0 1 16,-16 h360 a16,16 0 0 1 16,16 v38 h-392 z' fill='#2563eb'/>
+<text x='1188' y='298' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>Tune thresholds</text>
+<text x='1188' y='348' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>lo / hi on the tune</text>
+<text x='1188' y='379' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>set, best F1</text>
+<g filter='url(#sh)'><rect x='1448' y='260' width='392' height='138' rx='16' fill='#f8fafc' stroke='#475569' stroke-width='3'/></g>
+<path d='M1448,276 a16,16 0 0 1 16,-16 h360 a16,16 0 0 1 16,16 v38 h-392 z' fill='#475569'/>
+<text x='1644' y='298' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>HateCheck</text>
+<text x='1644' y='348' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>CC BY 4.0; 725 cases,</text>
+<text x='1644' y='379' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>test only</text>
+<g filter='url(#sh)'><rect x='80' y='532' width='301' height='190' rx='16' fill='#f8fafc' stroke='#475569' stroke-width='3'/></g>
+<path d='M80,548 a16,16 0 0 1 16,-16 h269 a16,16 0 0 1 16,16 v38 h-301 z' fill='#475569'/>
+<text x='230' y='570' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>Comment</text>
+<text x='230' y='620' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>FastAPI,</text>
+<text x='230' y='651' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>1 to 5,000 chars</text>
+<g filter='url(#sh)'><rect x='445' y='532' width='301' height='190' rx='16' fill='#f5f3ff' stroke='#7c3aed' stroke-width='3'/></g>
+<path d='M445,548 a16,16 0 0 1 16,-16 h269 a16,16 0 0 1 16,16 v38 h-301 z' fill='#7c3aed'/>
+<text x='595' y='570' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>Detoxify</text>
+<text x='595' y='620' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>toxicity score,</text>
+<text x='595' y='651' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>about 20 ms on CPU</text>
+<g filter='url(#sh)'><rect x='810' y='532' width='301' height='190' rx='16' fill='#fff7ed' stroke='#ea580c' stroke-width='3'/></g>
+<path d='M810,548 a16,16 0 0 1 16,-16 h269 a16,16 0 0 1 16,16 v38 h-301 z' fill='#ea580c'/>
+<text x='960' y='570' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>Confident?</text>
+<text x='960' y='620' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>score &lt;= lo: allow</text>
+<text x='960' y='651' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>score &gt;= hi: flag</text>
+<rect x='844' y='672' width='232' height='36' rx='18' fill='#dc2626'/>
+<text x='960' y='697' font-size='20' font-weight='700' fill='#ffffff' text-anchor='middle'>else: ask the LLM</text>
+<g filter='url(#sh)'><rect x='1174' y='532' width='301' height='190' rx='16' fill='#f5f3ff' stroke='#7c3aed' stroke-width='3'/></g>
+<path d='M1174,548 a16,16 0 0 1 16,-16 h269 a16,16 0 0 1 16,16 v38 h-301 z' fill='#7c3aed'/>
+<text x='1325' y='570' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>gpt-oss:20b</text>
+<text x='1325' y='620' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>via Ollama, returns</text>
+<text x='1325' y='651' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>flag, category, reason</text>
+<g filter='url(#sh)'><rect x='1539' y='532' width='301' height='190' rx='16' fill='#f0fdf4' stroke='#16a34a' stroke-width='3'/></g>
+<path d='M1539,548 a16,16 0 0 1 16,-16 h269 a16,16 0 0 1 16,16 v38 h-301 z' fill='#16a34a'/>
+<text x='1690' y='570' font-size='27' font-weight='800' fill='#ffffff' text-anchor='middle'>Decision</text>
+<text x='1690' y='620' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>flag, route,</text>
+<text x='1690' y='651' font-size='22' font-weight='500' fill='#334155' text-anchor='middle'>category, reason</text>
+<text x='50' y='800' font-size='26' font-weight='800' fill='#0f172a' text-anchor='start'>Measured</text>
+<text x='190' y='800' font-size='21' font-weight='500' fill='#334155' text-anchor='start'>1,000 Civil Comments test comments and 725 HateCheck cases, M4 laptop. Numbers from the README.</text>
+<rect x='50' y='820' width='345' height='120' rx='16' fill='#ffffff' stroke='#4f46e5' stroke-width='3'/>
+<rect x='50' y='820' width='12' height='120' rx='6' fill='#4f46e5'/>
+<text x='228' y='878' font-size='40' font-weight='800' fill='#4f46e5' text-anchor='middle'>0.841</text>
+<text x='228' y='916' font-size='20' font-weight='600' fill='#334155' text-anchor='middle'>Civil F1, hybrid (wide)</text>
+<rect x='419' y='820' width='345' height='120' rx='16' fill='#ffffff' stroke='#9333ea' stroke-width='3'/>
+<rect x='419' y='820' width='12' height='120' rx='6' fill='#9333ea'/>
+<text x='597' y='878' font-size='40' font-weight='800' fill='#9333ea' text-anchor='middle'>0.797</text>
+<text x='597' y='916' font-size='20' font-weight='600' fill='#334155' text-anchor='middle'>Civil F1, Detoxify</text>
+<rect x='788' y='820' width='345' height='120' rx='16' fill='#ffffff' stroke='#db2777' stroke-width='3'/>
+<rect x='788' y='820' width='12' height='120' rx='6' fill='#db2777'/>
+<text x='966' y='878' font-size='40' font-weight='800' fill='#db2777' text-anchor='middle'>0.976</text>
+<text x='966' y='916' font-size='20' font-weight='600' fill='#334155' text-anchor='middle'>hate recall, hybrid (wide)</text>
+<rect x='1156' y='820' width='345' height='120' rx='16' fill='#ffffff' stroke='#ea580c' stroke-width='3'/>
+<rect x='1156' y='820' width='12' height='120' rx='6' fill='#ea580c'/>
+<text x='1335' y='878' font-size='40' font-weight='800' fill='#ea580c' text-anchor='middle'>0.926</text>
+<text x='1335' y='916' font-size='20' font-weight='600' fill='#334155' text-anchor='middle'>HateCheck acc., LLM alone</text>
+<rect x='1525' y='820' width='345' height='120' rx='16' fill='#ffffff' stroke='#0d9488' stroke-width='3'/>
+<rect x='1525' y='820' width='12' height='120' rx='6' fill='#0d9488'/>
+<text x='1704' y='878' font-size='40' font-weight='800' fill='#0d9488' text-anchor='middle'>1.2 s</text>
+<text x='1704' y='916' font-size='20' font-weight='600' fill='#334155' text-anchor='middle'>mean latency, hybrid (wide)</text>
+<rect x='50' y='968' width='22' height='22' rx='5' fill='#475569'/>
+<text x='82' y='986' font-size='20' font-weight='600' fill='#334155' text-anchor='start'>Input</text>
+<rect x='170.0' y='968' width='22' height='22' rx='5' fill='#2563eb'/>
+<text x='202' y='986' font-size='20' font-weight='600' fill='#334155' text-anchor='start'>Code</text>
+<rect x='279.2' y='968' width='22' height='22' rx='5' fill='#7c3aed'/>
+<text x='311' y='986' font-size='20' font-weight='600' fill='#334155' text-anchor='start'>Model</text>
+<rect x='399.2' y='968' width='22' height='22' rx='5' fill='#ea580c'/>
+<text x='431' y='986' font-size='20' font-weight='600' fill='#334155' text-anchor='start'>Check / gate</text>
+<rect x='594.8' y='968' width='22' height='22' rx='5' fill='#16a34a'/>
+<text x='627' y='986' font-size='20' font-weight='600' fill='#334155' text-anchor='start'>Output</text>
+<text x='1870' y='986' font-size='20' font-weight='600' fill='#334155' text-anchor='end'>Detoxify · scikit-learn · Ollama · FastAPI · pandas</text></svg>

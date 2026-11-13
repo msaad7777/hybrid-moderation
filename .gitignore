@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/raw/
+data/sets/
+models/
+results/llm-run.log
